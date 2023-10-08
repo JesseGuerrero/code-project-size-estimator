@@ -1,0 +1,124 @@
+@import '../../App';
+
+$lightBg: white;
+
+.Dropzone {
+    height: 12vw;
+    width: 12vw;
+    background-color: #fff;
+    border: 2px dashed rgb(187, 186, 186);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 10vw;
+    span {
+        font-size: 8vw;
+        justify-content: center;
+        position: absolute;
+        margin-top: 0.5vw;
+        color: $special;
+        opacity: 0.7;
+    }
+    .FileInput {
+        display: none;
+    }
+}
+
+.summary-content {
+    display: none;
+    .root-title {
+        font-size: 2.5vw;
+        text-align: left;
+        letter-spacing: 3px;
+        margin: 3vw;
+        font-weight: 300;
+        padding-left: 1vw;
+    }
+    .total-files {
+        font-size: 2vw;
+        color: $special;
+    }
+    .row.cont {
+        display: none;
+        margin: 2.5vw;
+        .line {
+            left: 1.5vw;
+            text-align: right;
+            width: 75%;
+            position: relative;
+        }
+        .left {
+            background-color: $lightBg;
+            height: 35vw;
+            margin: 0.3vw;
+            z-index: -1;
+        }
+        .right {
+            background-color: rgba(205, 205, 205, 0.2);
+            height: 35vw;
+            margin: 0.3vw;
+            z-index: -1;
+        }
+    }
+    .sub-heading {
+        display: none;
+        font-size: 1.5vw;
+        padding-left: 4vw;
+        text-align: left;
+    }
+    .l {
+        background-color: white;
+    }
+    .r {
+        background-color: white;
+        padding-top: 3vw;
+        .fas {
+            font-size: 2.7vw;
+        }
+        .fas:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.loader {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-top: 10vw;
+    display: none;
+}
+
+.chart {
+    margin-top: 1em;
+    z-index: 10;
+}
+
+.Highlight {
+    animation: grow-shrink 4s infinite;
+}
+
+@keyframes grow-shrink {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.alert {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-top: 9vw;
+    .special {
+        color: $special;
+    }
+}
